@@ -1,0 +1,18 @@
+{
+  "name": "mcpn-hub",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.20.0",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "corepack pnpm --parallel --filter \"./apps/*\" dev",
+    "build": "corepack pnpm -r --if-present build",
+    "typecheck": "corepack pnpm -r --if-present typecheck",
+    "test": "corepack pnpm --filter @hub/api test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
